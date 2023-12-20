@@ -14,6 +14,7 @@
             <input type="text" class="form-control" placeholder="Enter Username"><br>
             <input type="password" name="" id="" class="form-control" placeholder="Enter password"><br><br>
             <button class="btn btn-primary">Login</button>
+            <p>Don't have an account? Register <a href="register.php">Here</a></p>
         </form>
     </div>
 </body>

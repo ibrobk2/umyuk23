@@ -22,6 +22,8 @@
             <input type="password" name="pass" id="" class="form-control" placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
             <button class="btn btn-primary" name="btn_register" type="submit">Register</button>
+            <p>Already have an account? Login <a href="login.php">Here</a></p>
+
         </form>
     </div>
 </body>
