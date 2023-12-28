@@ -1,9 +1,9 @@
 <?php 
-
+session_start();
 // Database Connection
 require "connection.php";
 
-
+// REGISTRATION SECTION
 if(isset($_POST['btn_register'])){
     // variables
     $full_name = $_POST['fname'];
@@ -26,6 +26,22 @@ if(isset($_POST['btn_register'])){
                 window.location = 'login.php';
             </script>        
         ";
+    }
+}
+
+
+// LOGIN SECTION
+if(isset($_POST['btn_login'])){
+    $username = $_POST['user'];
+    $password = md5($_POST['pwd']);
+    $sql = "SELECT * FROM `users` WHERE `username`='$username' AND `password`='$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($result)>0){
+        $_SESSION['user'] = $username;
+        header("Location: home.php");
+    }else{
+        echo "Invalid Username/Password";
     }
 }
 

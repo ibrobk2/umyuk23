@@ -10,10 +10,10 @@
     <div class="container">
         <h2>User Login</h2>
 
-        <form action="">
-            <input type="text" class="form-control" placeholder="Enter Username"><br>
-            <input type="password" name="" id="" class="form-control" placeholder="Enter password"><br><br>
-            <button class="btn btn-primary">Login</button>
+        <form action="process.php" method="post">
+            <input type="text" class="form-control" placeholder="Enter Username" name="user"><br>
+            <input type="password" name="pwd" id="" class="form-control" placeholder="Enter password"><br><br>
+            <button class="btn btn-primary" name="btn_login">Login</button>
             <p>Don't have an account? Register <a href="register.php">Here</a></p>
         </form>
     </div>
